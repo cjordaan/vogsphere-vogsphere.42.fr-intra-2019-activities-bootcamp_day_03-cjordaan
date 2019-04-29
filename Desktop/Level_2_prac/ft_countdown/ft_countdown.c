@@ -1,32 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_numbers.c                                 :+:      :+:    :+:   */
+/*   ft_countdown.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cjordaan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/04/29 22:39:19 by cjordaan          #+#    #+#             */
-/*   Updated: 2019/04/29 23:16:09 by cjordaan         ###   ########.fr       */
+/*   Created: 2019/04/29 23:22:39 by cjordaan          #+#    #+#             */
+/*   Updated: 2019/04/29 23:28:13 by cjordaan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include <unistd.h>
 
-void		ft_print_numbers(void)
+void	ft_countdown(void)
 {
 	int x;
 
-	x = '0';
-	while (x <= '9')
+	x = '9';
+	while (x >= '0')
 	{
 		write(1, &x, 1);
-		x++;
+		x--;
 	}
 }
 
 int		main(void)
 {
-	ft_print_numbers();
+	ft_countdown();
 	return (0);
 }

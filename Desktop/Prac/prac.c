@@ -1,32 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_numbers.c                                 :+:      :+:    :+:   */
+/*   prac.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cjordaan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/04/29 22:39:19 by cjordaan          #+#    #+#             */
-/*   Updated: 2019/04/29 23:16:09 by cjordaan         ###   ########.fr       */
+/*   Created: 2019/04/26 01:02:23 by cjordaan          #+#    #+#             */
+/*   Updated: 2019/04/26 07:33:44 by cjordaan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
 #include <unistd.h>
-
-void		ft_print_numbers(void)
-{
-	int x;
-
-	x = '0';
-	while (x <= '9')
-	{
-		write(1, &x, 1);
-		x++;
-	}
-}
 
 int		main(void)
 {
-	ft_print_numbers();
+	write(1, "aeiou\n", 7);
 	return (0);
 }

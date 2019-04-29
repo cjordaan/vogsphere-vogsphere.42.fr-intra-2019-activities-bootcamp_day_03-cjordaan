@@ -1,32 +1,45 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   print.c                                            :+:      :+:    :+:   */
+/*   aff_a.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cjordaan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/04/29 21:51:51 by cjordaan          #+#    #+#             */
-/*   Updated: 2019/04/29 22:34:32 by cjordaan         ###   ########.fr       */
+/*   Created: 2019/04/25 23:26:19 by cjordaan          #+#    #+#             */
+/*   Updated: 2019/04/25 23:27:18 by cjordaan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
 #include <unistd.h>
 
-void	ft_print_numbers(void)
+void	ft_putchar(char x)
 {
-	int x;
+	write(1, &x, 1);
+}
 
-	x = '0';
-	while (x <= '9')
+void	aff_a(char *str)
+{
+	int x = 0;
+
+	while (str[x])
 	{
-		write(1, &x, 1);
+		if (str[x] == 'a')
+		{
+			ft_putchar('a');
+			break;
+		}
 		x++;
 	}
 }
 
-int		main(void)
+int		main(int argc, char **argv)
 {
-	ft_print_numbers();
-	return (0);
+	if ( argc == 2)
+	{
+		aff_a(argv[1]);
+	}
+	else
+		ft_putchar('a');
+	ft_putchar('\n');
+	return(0);
 }

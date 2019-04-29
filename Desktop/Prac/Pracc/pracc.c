@@ -1,32 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_numbers.c                                 :+:      :+:    :+:   */
+/*   pracc.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cjordaan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/04/29 22:39:19 by cjordaan          #+#    #+#             */
-/*   Updated: 2019/04/29 23:16:09 by cjordaan         ###   ########.fr       */
+/*   Created: 2019/04/26 05:51:43 by cjordaan          #+#    #+#             */
+/*   Updated: 2019/04/26 07:32:28 by cjordaan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
 #include <unistd.h>
 
-void		ft_print_numbers(void)
+int ft_putstr(char *str)
 {
-	int x;
+	int i;
 
-	x = '0';
-	while (x <= '9')
+	i = 0;
+	while(str[i])
 	{
-		write(1, &x, 1);
-		x++;
+		write(1, &str[i], 1);
+		i++;
 	}
-}
-
-int		main(void)
-{
-	ft_print_numbers();
-	return (0);
+	return (str[1]);
 }

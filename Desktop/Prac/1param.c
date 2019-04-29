@@ -1,32 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_numbers.c                                 :+:      :+:    :+:   */
+/*   1param.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cjordaan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/04/29 22:39:19 by cjordaan          #+#    #+#             */
-/*   Updated: 2019/04/29 23:16:09 by cjordaan         ###   ########.fr       */
+/*   Created: 2019/04/26 01:19:44 by cjordaan          #+#    #+#             */
+/*   Updated: 2019/04/26 01:52:42 by cjordaan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
 #include <unistd.h>
 
-void		ft_print_numbers(void)
+int		main(int argc, char *argv[])
 {
-	int x;
+	int i;
+	int j;
 
-	x = '0';
-	while (x <= '9')
+	i = 0;
+	j = 0;
+
+	if (argc >= 1)
 	{
-		write(1, &x, 1);
-		x++;
+		while (argv[2][i])
+		{
+			write(1, argv[2], 1);
+			while (argc[2][j])
+			{
+				write(1, argv[2], 1);
+				j++;
+			}
+			i++;
+		}
 	}
-}
-
-int		main(void)
-{
-	ft_print_numbers();
+	write(1, "\n", 1);
 	return (0);
 }
